@@ -182,9 +182,9 @@ def main() -> None:  # run me with python3, fool
         except:
             pass
 
-        out_file = f'output/{function.desc()}.png'
+        out_file = f'output/{function.desc()}.pdf'
 
-        subprocess.call(['dot', '-Tpng', f'-o{out_file}', t.name])
+        subprocess.call(['dot', '-Tpdf', f'-o{out_file}', t.name])
         print(f'[+] Wrote {function.desc()} to {out_file}')
 
         try:
